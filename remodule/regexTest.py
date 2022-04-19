@@ -25,5 +25,10 @@ patter_textonly = re.compile(r'[^0-9]+')
 result = patter_textonly.findall(sample_text)
 print(result)
 
+#searching for words wich contains more than 2 vowels 
+patter_with_two_vowels = re.compile(r'\w[aeiouAEIOU]{2}\w')
+result = patter_with_two_vowels.findall(sample_text)
+print(result)
+
 #closing a file 
 sapmle_file.close()
