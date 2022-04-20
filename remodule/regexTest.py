@@ -30,5 +30,17 @@ patter_with_two_vowels = re.compile(r'\w[aeiouAEIOU]{2}\w')
 result = patter_with_two_vowels.findall(sample_text)
 print(result)
 
+#patter to find all the phone numbers in text 
+patter_for_phone_numbers = re.compile(r'\d{3}-\d{4}-\d{4}')
+result = patter_for_phone_numbers.finditer(sample_text)
+for match in result:
+    print(match)
+
+#patter to find all the  Indain phone numbers in text 
+patter_for_indian_phone_numbers = re.compile(r'(\+91)?(\d{10})')
+result = patter_for_indian_phone_numbers.finditer(sample_text)
+for match in result:
+    print(match)
+
 #closing a file 
 sapmle_file.close()
