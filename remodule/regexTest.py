@@ -42,5 +42,11 @@ result = patter_for_indian_phone_numbers.finditer(sample_text)
 for match in result:
     print(match)
 
+#patter to find all the  Indain phone numbers in text more complex
+patter_for_indian_phone_numbers_complex = re.compile(r'(\+91)?(-)?\s*?(91)?\s*?([6-9]{1}\d{2})-?\s*?(\d{3})-?\s*?(\d{6})')
+result = patter_for_indian_phone_numbers_complex.finditer(sample_text)
+for match in result:
+    print(match)
+
 #closing a file 
 sapmle_file.close()
